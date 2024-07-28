@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wrapper-padding: 8px;
+}
+/* 
+.indicatorWrapper {
+    position: relative;
+    padding: var(--wrapper-padding);
+    width: 77px;
+    height: 238px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
+    background-color: #9ef4fc;
+}
+
+.stepsPlaceholderWrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    background: rgba(201, 201, 201, 0.622);
+    background: linear-gradient(
+        0deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 247, 0, 1) 50%,
+        rgba(0, 255, 28, 1) 100%
+    );
+    height: 0px;
+}
+
+.indicatorStep {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 10px;
+    border-radius: 2px;
+    z-index: 3;
+    font-size: 8px;
+    text-align: center;
+}
+
+.stepSpacer {
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 3;
+} */
+
+.volumeChartContainer {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.chartIndicatorWrapper {
+    width: 77px;
+    height: 238px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.chartIndicator {
+    position: relative;
+    width: 77px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 2px;
+    z-index: 2;
+}
+.chartIndicator::before {
+    display: block;
+    content: '';
+    width: 77px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.chartColorBackground {
+    background-color: var(--level-color, #ec1414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--level-height, 0px);
+    transition: all 300ms ease-in-out;
+}
